@@ -6,6 +6,7 @@ Navigation
  */
 
 import 'package:flutter/material.dart';
+import 'package:gdsc/basic_widgets/business_card.dart';
 
 class InteractiveWidgets extends StatelessWidget {
   InteractiveWidgets({super.key});
@@ -116,21 +117,27 @@ class InteractiveWidgets extends StatelessWidget {
               ),
               const SizedBox(height: 40),
               /// Navigation
-              TextButton(
-                onPressed: () {
-                  /// push
-                  /*
-                  Navigator.push(context, MaterialPageRoute(builder: (v) {
-                    return myScreen(context);
-                  }));
-                   */
-                  /// pushReplacement
-                  //Navigator.pushReplacement(context, MaterialPageRoute(builder: (v)=>BusinessCard()));
+              Center(
+                child: TextButton(
+                  onPressed: () {
+                    /// push
+                    /*
+                    Navigator.push(context, MaterialPageRoute(builder: (v) {
+                      return myScreen(context);
+                    }));
+                     */
+                    /// pushReplacement
+                    //Navigator.pushReplacement(context, MaterialPageRoute(builder: (v)=>BusinessCard()));
 
-                  //print(emailController.text);
-                  //emailController.clear();
-                },
-                child: const Text('login'),
+                    //print(emailController.text);
+                    //emailController.clear();
+                    if(true){
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_){return BusinessCard();}));
+                      print('object');
+                    }
+                  },
+                  child: const Text('login'),
+                ),
               ),
             ],
           ),

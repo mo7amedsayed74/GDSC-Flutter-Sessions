@@ -1,4 +1,6 @@
+import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 class CounterScreen extends StatefulWidget {
   const CounterScreen({super.key});
@@ -14,7 +16,7 @@ class _CounterScreenState extends State<CounterScreen> {
   void initState() {
     super.initState();
 
-    print('initState');
+    debugPrint('initState');
   }
 
   @override
@@ -34,6 +36,15 @@ class _CounterScreenState extends State<CounterScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          ConditionalBuilder(
+            condition: count == 5,
+            builder: (context) {
+              return const Text('counter is 5');
+            },
+            fallback: (context) {
+              return const Text('welcome');
+            },
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -74,6 +85,26 @@ class _CounterScreenState extends State<CounterScreen> {
               });
             },
             style: TextButton.styleFrom(foregroundColor: Colors.blue),
+          ),
+          const Gap(20),
+          Stack(
+            alignment: AlignmentDirectional.bottomCenter,
+            children: [
+              InkWell(
+                onTap: () {
+                  debugPrint('object');
+                },
+                child: Container(
+                  color: Colors.black,
+                  width: 150,
+                  height: 150,
+                ),
+              ),
+              const Text(
+                'GDSC',
+                style: TextStyle(color: Colors.white),
+              ),
+            ],
           ),
         ],
       ),

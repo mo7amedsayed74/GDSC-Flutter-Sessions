@@ -32,26 +32,19 @@ class ResultScreen extends StatelessWidget {
         child: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                gender,
-                style: Theme.of(context).textTheme.headlineLarge,
-                textAlign: TextAlign.center,
+                'Gender : $gender',
               ),
               Text(
-                'Result : ${result.toStringAsFixed(1)}',
-                style: Theme.of(context).textTheme.headlineLarge,
-                textAlign: TextAlign.center,
+                'Result : $result',
               ),
               Text(
                 'Healthiness : $healthiness',
-                style: Theme.of(context).textTheme.headlineLarge,
-                textAlign: TextAlign.center,
               ),
               Text(
                 'Age : $age',
-                style: Theme.of(context).textTheme.headlineLarge,
-                textAlign: TextAlign.center,
               ),
             ],
           ),

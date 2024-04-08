@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gdsc/statemanagement/counter_states.dart';
+import 'package:gdsc/statemanagement/cubit/counter_states.dart';
 import 'package:gdsc/statemanagement/cubit/counter_cubit.dart';
 
 class Counter extends StatelessWidget {

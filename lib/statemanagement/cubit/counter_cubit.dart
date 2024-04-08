@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gdsc/statemanagement/counter_states.dart';
+import 'package:gdsc/statemanagement/cubit/counter_states.dart';
 
 class CounterCubit extends Cubit<CounterStates> {
   CounterCubit() : super(InitialState());

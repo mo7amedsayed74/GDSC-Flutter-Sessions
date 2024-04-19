@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gdsc/exception_&_asynchronous/splash_screen_example/splash_screen.dart';
 import 'package:gdsc/statemanagement/counter_with_cubit.dart';
 import 'package:gdsc/statemanagement/cubit/counter_cubit.dart';
 
@@ -14,9 +15,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context)=> CounterCubit(),
-      child: MaterialApp(
+      child: const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Counter(),
+        home: SplashScreen(),
       ),
     );
   }

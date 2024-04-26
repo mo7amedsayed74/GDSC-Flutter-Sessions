@@ -33,6 +33,7 @@ dependencies:
   conditional_builder_null_safety: ^0.0.6
   gap: ^3.0.1
   flutter_bloc: ^8.1.5
+  sqflite: ^2.3.3
 
 
   # The following adds the Cupertino Icons font to your application.
